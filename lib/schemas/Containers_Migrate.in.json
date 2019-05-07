@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceGroupName": {
+            "required": true,
+            "type": "string"
+        },
+        "farmId": {
+            "required": true,
+            "type": "string"
+        },
+        "shareName": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Parameters of container migration job.",
+            "properties": {
+                "containerName": {
+                    "description": "The name of the container to be migrated.",
+                    "type": "string"
+                },
+                "destinationShareUncPath": {
+                    "description": "The UNC path of the destination share for migration.",
+                    "type": "string"
+                },
+                "storageAccountName": {
+                    "description": "The name of the storage account where the container locates.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "storageAccountName",
+                "containerName",
+                "destinationShareUncPath"
+            ],
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
